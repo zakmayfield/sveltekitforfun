@@ -2,9 +2,8 @@ import posts from './data';
 import type { Post } from './data';
 
 type Summary = Omit<Post, 'content'>;
-type Summaries = Summary[];
 type LoadResult = {
-	summaries: Summaries;
+	summaries: Summary[];
 };
 
 export function load(): LoadResult {
