@@ -2,6 +2,9 @@
 	"name": "sveltekit-one",
 	"version": "0.0.1",
 	"private": true,
+	"prisma": {
+		"seed": "ts-node prisma/seed.ts"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -24,9 +27,13 @@
 		"prisma": "^5.1.0",
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
+		"ts-node": "^10.9.1",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@prisma/client": "^5.1.0"
+	}
 }
