@@ -1,16 +1,20 @@
-import posts from './data';
 import type { Post } from './data';
+import prisma from '$lib/prisma';
 
 type Summary = Omit<Post, 'content'>;
 type LoadResult = {
 	summaries: Summary[];
 };
 
-export function load(): LoadResult {
+export async function load(): Promise<LoadResult> {
+	const result = await prisma.post.findMany({
+		select: {
+			title: true,
+			slug: true
+		}
+	});
+
 	return {
-		summaries: posts.map<Summary>((post) => ({
-			slug: post.slug,
-			title: post.title
-		}))
+		summaries: result
 	};
 }
