@@ -7,6 +7,7 @@
 		},
 		"title": "Join the Prisma Slack",
 		"content": "https://slack.prisma.io",
+		"slug": "prisma-slack",
 		"published": true
 	},
 	{
@@ -17,6 +18,7 @@
 		},
 		"title": "Follow Prisma on Twitter",
 		"content": "https://www.twitter.com/prisma",
+		"slug": "prisma-twitter",
 		"published": true
 	},
 	{
@@ -27,6 +29,7 @@
 		},
 		"title": "Ask a question about Prisma on GitHub",
 		"content": "https://www.github.com/prisma/prisma/discussions",
+		"slug": "prisma-github",
 		"published": true
 	},
 	{
@@ -37,6 +40,7 @@
 		},
 		"title": "Pump Up The Jam!",
 		"content": "https://youtu.be/9EcjWd-O4jI",
+		"slug": "pump-up-the-jam",
 		"published": false
 	}
 ]

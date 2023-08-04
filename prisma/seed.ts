@@ -15,6 +15,7 @@ async function main() {
 					create: {
 						title: p.title,
 						content: p.content,
+						slug: p.slug,
 						published: p.published
 					}
 				}
