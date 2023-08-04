@@ -1,9 +1,13 @@
 import { error } from '@sveltejs/kit';
-import posts from '../data';
-import type { Post } from '../data';
+import type { Post } from '@prisma/client';
+import prisma from '$lib/prisma';
 
-export function load({ params }): { post?: Post } {
-	const post = posts.find((post: Post) => post.slug === params.slug);
+export async function load({ params }): Promise<{ post?: Post }> {
+	const post = await prisma.post.findUnique({
+		where: {
+			slug: params.slug
+		}
+	});
 
 	if (!post) throw error(404);
 
